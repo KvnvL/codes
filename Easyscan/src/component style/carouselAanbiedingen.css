@@ -1,0 +1,11 @@
+.carousel {
+    margin-left: -10%;
+    padding-left: 10%;
+    width: 92vw !important;
+  }
+  
+  .react-multi-carousel-item{
+    width: auto !important;
+    margin-right: 1%;
+  }
+  

@@ -1,0 +1,1437 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap%27');
+
+:root {
+  --highlight: #7b42fa;
+  --tableHeadBackgroundClor: #E9DFFE;
+  --secondColor: #49089e;
+  --tertiaryColor: #B491F9;
+  --inputBG: #E7E7E7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #373737;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1{
+  font-weight: 800; 
+}
+
+h2{
+  font-weight: 800 ;
+}
+
+.homepage-title{
+  margin-top: 25px;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 70% 12.5% 15%;
+  height: 75px;
+  width: 86vw;
+  padding: 0 7vw;
+  grid-template-areas: "logo profielFoto";
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  position: fixed;
+  z-index: 100;
+  background-color: #fff;
+}
+
+#logo {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--highlight);
+}
+
+#shoppingCartWrapper{
+  display: flex;
+  align-items: center;
+}
+
+#shoppingCartWrapper img{
+  height: 2.2rem;
+  margin-top: 5px;
+}
+
+#profielFotoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+#profielFotoWrapper i {
+  font-size: 2rem;
+}
+
+
+#nav {
+  position: fixed;
+  display: grid;
+  width: 90vw;
+  padding: 0 5vw;
+  height: 75px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  bottom:0;
+  z-index: 100;
+  text-align: center;
+}
+
+#no-display{
+  display: none;
+}
+
+.fa-home {
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+#scanButtonWrapper {
+  margin-top: -5px;
+}
+
+#burgerWrapper {
+  margin: 20px auto;
+}
+
+#nav-icon3 {
+  width: 45px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #373737;
+  border-radius: 20px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 5px;
+}
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+  top: 15px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 25px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navOverlay {
+  position: fixed;
+  height: 275px;
+  width: 100vw;
+  border-radius: 25px 25px 0 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  bottom: 0;
+  margin: 0 0 -250px 0;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.menuToggle {
+  margin: 0 0 75px 0 !important;
+}
+
+#navOverlayGrid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 25px 0vw;
+  row-gap: 25px;
+  grid-template-areas:
+  "menuItem1 menuItem2 menuItem3"
+  "menuItem4 menuItem5 menuItem6"
+  "menuItem7 menuItem7 menuItem7" ;
+}
+
+.fas {
+  font-size: 35px;
+}
+
+.menuItem {
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.menuItemName{
+  font-size: 3.75vw;
+}
+
+#menuItem1 {
+  grid-area: menuItem1;
+}
+
+#menuItem2 {
+  grid-area: menuItem2;
+}
+
+#menuItem3 {
+  grid-area: menuItem3;
+}
+
+#menuItem4 {
+  grid-area: menuItem4;
+}
+
+#menuItem5 {
+  grid-area: menuItem5;
+}
+
+#menuItem6 {
+  grid-area: menuItem6;
+}
+
+#menuItem7 {
+  grid-area: menuItem7;
+}
+
+#content {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  margin: 0 8%
+}
+
+#searchbar {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--inputBG);
+  width: 70% !important;
+  padding: 10px 15%;
+  color: #5D5D5D;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#searchbar:focus {
+  outline: 1px solid var(--highlight);
+}
+
+#searchIcon {
+  position: absolute;
+  z-index: 10;
+  color: #5D5D5D;
+  margin: 25px 0px 0px 15px;
+}
+
+#homeSpaaractie {
+  margin-top: 25px;
+  width: 100%;
+}
+
+
+.producSaleCardWrapper {
+  width: 112.5px;
+}
+
+.productSaleCard {
+  height: 150px;
+  width: 112.5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.productSaleCard img {
+  height: 150px;
+  width: 112.5px;
+}
+
+.productSaleCardSticker {
+  position: absolute;
+  margin-top: -55px;
+}
+
+.productSaleCardStickerCircle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--highlight);
+  border-radius: 50%;
+  text-align: center;
+  z-index: 10;
+  border: 3px solid #fff;
+}
+
+.productSaleCardStickerOffer h4 {
+  padding-top: 5px;
+  color: #fff !important;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.productSaleCardName {
+  text-align: center;
+  font-size: 12.5px;
+}
+
+.recipeCardWrapper {
+  width: 230px;
+  border: 0.5px solid rgba(112, 112, 112, 50%);
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.recipeCardImg img {
+  width: 230px;
+  border-radius: 5px 5px 0 0;
+}
+
+.recipeCardText {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 55px auto;
+  grid-template-areas: "recipeCardTextName recipeCardTextName" "recipeCardTextCal recipeCardTextTime";
+  margin: 0 3%;
+  padding-bottom: 5%;
+}
+
+.recipeCardTextName {
+  font-size: 15px;
+  font-weight: 600;
+  grid-area: recipeCardTextName;
+}
+
+.recipeCardTextCal {
+  grid-area: recipeCardTextCal;
+  font-size: 15px;
+}
+
+.recipeCardTextTime {
+  grid-area: recipeCardTextTime;
+  font-size: 15px;
+  text-align: right;
+}
+
+#ProductPageTitle {
+  font-weight: 600;
+}
+
+#ProductPageName {
+  line-height: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#ProductPageImageWrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#ProductPageImage {
+  margin: 0 auto;
+}
+
+#ProductPageImageCal {
+  position: absolute;
+  top: 160px;
+  left: 80%;
+  font-weight: 600;
+}
+
+#ProductPagePrice {
+  font-weight: 800;
+}
+
+#producttext {
+  line-height: 17.5px;
+}
+
+#voorraad {
+  margin-top: 50px;
+}
+
+#voorraad h2 {
+  font-weight: 600;
+}
+
+#voorraad table {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  border-collapse: collapse;
+  margin-top: 17.5px;
+}
+
+#voorraad th {
+  text-align: left;
+  font-weight: bold;
+  background-color: var(--tableHeadBackgroundClor);
+  padding: 5px 10px 0 10px;
+  border-radius: 10px 0 0 0;
+  font-size: 17.5px;
+}
+
+#voorraad th+th {
+  text-align: right;
+  border-radius: 0 10px 0 0;
+}
+
+#voorraad td {
+  text-align: left;
+  padding: 0px 10px 5px 10px;
+}
+
+#voorraad td+td {
+  text-align: right;
+}
+
+#voorraad td img {
+  margin-top: 5px;
+}
+
+#ingredienten h2 {
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+#ingredienten ul {
+  margin: 10px 6% 0 6%;
+}
+
+#voedingswaren {
+  margin-top: 50px;
+}
+
+#voedingswaren h2 {
+  font-weight: 600;
+}
+
+#voedingswaren table {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  border-collapse: collapse;
+  margin-top: 17.5px;
+}
+
+#voedingswaren th {
+  text-align: left;
+  font-weight: bold;
+  background-color: var(--tableHeadBackgroundClor);
+  padding: 5px 15px 0 15px;
+  border-radius: 10px 0 0 0;
+  font-size: 17.5px;
+}
+
+#voedingswaren th+th {
+  text-align: right;
+  border-radius: 0 10px 0 0;
+}
+
+#voedingswaren td {
+  text-align: left;
+  padding: 0px 15px 5px 15px;
+}
+
+#voedingswaren td+td {
+  text-align: right;
+}
+
+#productLocatie {
+  margin-top: 50px;
+}
+
+#productLocatie h2 {
+  font-weight: 600;
+}
+
+#productLocatie table {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  border-collapse: collapse;
+  margin-top: 17.5px;
+}
+
+#productLocatie th {
+  text-align: left;
+  font-weight: bold;
+  background-color: var(--tableHeadBackgroundClor);
+  padding: 5px 15px 0 15px;
+  border-radius: 10px 0 0 0;
+  font-size: 17.5px;
+}
+
+#productLocatie th+th {
+  text-align: center;
+  border-radius: 0;
+}
+
+#productLocatie th+th+th {
+  text-align: center;
+  border-radius: 0 10px 0 0;
+}
+
+#productLocatie td {
+  text-align: center;
+}
+
+#routeButtonWrapper {
+  display: flex;
+}
+
+#routeButton {
+  background-color: var(--highlight);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 50px;
+  margin: 35px auto 25px auto;
+}
+
+.fa-long-arrow-alt-right {
+  color: #fff;
+  font-size: 25px;
+}
+
+#recipeWrapper {
+  margin-top: 25px;
+  margin-bottom: 6rem;
+}
+
+.Recipes {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.RecipesPageCardWrapper {
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  border-radius: 10px;
+}
+
+.RecipesPageCardWrapper img {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.RecipePageCardInfo {
+  padding: 5px 15px;
+}
+
+.RecipePageCardInfo h1 {
+  font-size: 4vw;
+}
+
+.RecipePageCardInfoExtra {
+  margin-top: 10px !important;
+}
+
+.RecipePageCardInfo h2 {
+  font-size: 3.5vw;
+  padding: 6px;
+}
+
+.RecipePageCardInfo h2 i {
+  font-size: 3.5vw;
+  color: var(--secondColor);
+}
+
+.RecipePageBanner {
+  margin-left: -10%;
+  margin-top: -10%;
+}
+
+.RecipePageBanner img {
+  width: 100vw;
+}
+
+.RecipePageContent h1 {
+  font-size: 8vw;
+  font-weight: 600;
+}
+
+#RecipePageInfo {
+  margin-top: 15px !important;
+}
+
+.RecipePageContent h2 {
+  font-size: 5vw;
+}
+
+.RecipePageContent h2 i {
+  font-size: 5vw;
+  color: var(--secondColor);
+}
+
+.RecipePageOption {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px 0 15px 0;
+}
+
+#bereidingswijze{
+margin-top: 10px;
+}
+
+.bereidingStap {
+  font-weight: 600;
+}
+
+.bereiding {
+  list-style-type: none;
+  text-decoration: none;
+  padding-bottom: 25px;
+}
+
+.bereidingBorder {
+  margin: 0 auto;
+  width: 80vw;
+  height: 1px;
+  background-color: var(--highlight);
+  margin-bottom: 25px;
+}
+
+#ingredientenButton{
+  border: 3px solid var(--highlight);
+  border-radius: 10px;
+  background-color: #fff;
+  width: 60vw;
+  margin: 25px 10vw 0 10vw;
+  padding: 0 30px;
+}
+
+#addToShoppingList{
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  backdrop-filter: blur(1.5px);
+}
+
+#overlay{
+  background-color: #fff;
+  width: 80vw;
+  margin: 25% 10vw;;
+  height: auto;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(35, 35, 35, 0.5);
+}
+
+.test{
+  display: block !important;
+}
+
+#addToShoppingListOverlayClose{
+  top: 10px;
+  left: 85%;
+  position: absolute
+}
+
+#addToShoppingListOverlaylist{
+  list-style: none;
+  margin-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+}
+
+#ingredientsAddList{
+  display: flex;
+  gap: 15px;
+}
+
+#ingredientsAddList input{
+ margin-top: 5px;
+}
+
+#addToShoppingListOverlayButton{
+  border: 3px solid var(--highlight);
+  border-radius: 10px;
+  background-color: #fff;
+  width: 60vw;
+  margin: 0px 10vw 25px 10vw;
+  padding: 0 30px;
+}
+
+
+.optionLine{
+  width: 25vw;
+  height: 3px;
+  background-color: var(--highlight);
+  margin-left: 12.5vw;
+  margin-top: -15px;
+}
+
+#optionLine2{
+  margin-left: 50vw !important;
+}
+
+#busy{
+  margin-top: 25px;
+}
+
+.busyWrapper{
+  display: grid;
+  grid-template-columns:  75% 25%;
+  grid-template-rows: auto auto;
+  padding: 12.5px 15px ;
+  position: relative;
+}
+
+.busyWrapper:nth-child(odd){
+  background-color: var(--tableHeadBackgroundClor);
+  border-radius: 10px;
+}
+
+.busy-name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.busy-distance{
+  font-size: 15px;
+}
+
+.busy-img{
+  text-align: right;
+}
+
+.busy-img img{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -50px;
+  background-color: #fff;
+  padding: 15px 5px;
+  border-radius: 10px;
+}
+
+.busyWrapper:nth-child(2) img{
+  margin-top: 0px ;
+}
+
+.busyWrapper:nth-child(4) img{
+  margin-top: 0px ;
+}
+
+.busyWrapper:nth-child(6) img{
+  margin-top: 0px ;
+}
+
+
+.login-user form{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-flow: column;
+  width: 15rem;
+  margin: .5rem 0;
+}
+
+.input-wrapper input, select{
+  font-size: 1rem;
+  height: 2.2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--inputBG);
+  padding: 0rem .5rem;
+
+}
+
+.login-user input[type=submit]{
+  border: none;
+  background-color: var(--highlight);
+  color: white;
+  padding: .5rem 2rem;
+  border-radius: .4rem;
+  margin-top: .5rem;
+  transition: .3s ease-in-out;
+}
+
+.login-user input[type=submit]:hover{
+  transform: scale(1.1);
+}
+
+.login-user p{
+  margin-top: .5rem;
+}
+
+.login-user p a{
+  color: var(--highlight);
+}
+
+.login-user p a:hover{
+  text-decoration: underline;
+}
+
+.register-user form{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  padding: 5%;
+}
+
+#createacc{
+  margin: 5%;
+}
+
+#loginh1{
+  margin: 5%;
+}
+
+#loginText{
+  margin: 5%;
+}
+
+.undrawlogin{
+  height: 30vh;
+  margin-top: 6rem;
+}
+
+.undrawWelkom{
+  width: 70vw;
+  left: 15%;
+  position: relative;
+  margin-top: 10em;
+}
+
+.register-user input[type=submit]{
+  border: none;
+  background-color: var(--highlight);
+  color: white;
+  padding: .5rem 2rem;
+  border-radius: .4rem;
+  margin-top: .5rem;
+  transition: .3s ease-in-out;
+}
+
+.register-user input[type=submit]:hover{
+  transform: scale(1.1);
+}
+
+.welcome-page p{
+  line-height: 1rem;
+}
+
+.welcome-page p a{
+  color: var(--highlight);
+}
+
+.welcome-page p a:hover{
+  text-decoration: underline;
+}
+
+.profile-wrapper{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 68vw;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.profile-item-wrapper img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  box-shadow: 0rem 0rem 1.5rem rgba(123, 66, 250, .2);
+  margin: 1rem;
+}
+
+
+.image-wrapper .editPF{
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--highlight);
+  border-radius: 100%;
+  position: absolute;
+  margin-top: -3.5rem;
+  margin-left: 8rem;
+  box-shadow: 0rem 0rem .75rem rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editPF i{
+  color: white;
+  font-size: 1.25rem;
+}
+
+input[type=file]{
+  display: none;
+}
+
+.profile-item-wrapper{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: .5rem;
+  width: 100%;
+}
+
+.profile-item-wrapper h2:nth-child(odd){
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+.profile-item-wrapper h2:nth-child(even){
+  font-size: 1.2rem;
+}
+
+.profile-item-wrapper span{
+  width: 100%;
+  height: 1px;
+  margin-top: 1px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.profile-item-wrapper-small{
+  width: 105%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-item-small{
+  display: flex;
+  flex-flow: column;
+}
+
+.profile-item-wrapper h2 input{
+  background-color: none;
+  border: none;
+  width: 50%;
+  text-align: end;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.switches{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  margin-top: .5rem;
+}
+
+.switches h2{
+  color: #7b42fa;
+  font-weight: 600;
+}
+
+.switch-wrapper{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch-wrapper h3{
+  font-weight: 500;
+}
+
+.switch-wrapper.other h4{
+  font-size: 1.25rem;
+  font-weight: 	500;
+}
+
+.switch{
+  width: max-content;
+  margin: .6rem 0;
+}
+
+.innerSwitch{
+  width: 3rem;
+  height: 1rem;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 1rem;
+}
+
+.innerSwitchTrue{
+  background-color: var(--tertiaryColor);
+}
+
+.outerSwitch{
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  margin-top: -1.25rem;
+}
+
+.switchTrue{
+  background-color: #7b42fa;
+  margin-left: 1.5rem;
+}
+
+.bottom-profile-page{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-profile-page button{
+  border: none;
+  background-color: none;
+  color: white;
+  background-color: var(--highlight);
+  padding: .75rem 2.25rem;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  transition: .3s ease-in-out;
+}
+
+.profile-page button:hover{
+  transform: scale(1.1);
+}
+
+.welcome-page p{
+margin-top: 15px;
+}
+
+.welcome-page-link{
+  font-weight: 600;
+  }
+
+/* SCANNER */
+
+video {
+
+  width: 100vw !important;
+
+  height: 85vh !important;
+
+  object-fit: cover;
+
+}
+
+#fullScanner{
+  position: absolute;
+  top: 75px;
+  left: 0 !important;
+}
+
+#fullScanner #scanPopup{
+  bottom: -500vh ;
+}
+
+#fullScanner .popup{
+  top: 60vh !important;
+}
+
+.loyaltyPoint{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(35, 35, 35, 0.25);
+  margin-top: 25px;
+}
+
+.loyaltyPoint img{
+  height: 75px;
+  margin: 0 auto;
+}
+
+#loyaltyCArdPrice{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#loyaltyCardPrice{
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#loyaltyCardNeeded{
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.shoppingcart-item{
+  display:  flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -8vw;
+  width: 100%;
+  padding: 0 8vw;
+  height: 6rem;
+}
+
+.shoppingcart-item .shoppingcart-item-left{
+  display: flex;
+  flex-flow: row;
+}
+
+.shoppingcart-item .shoppingcart-item-left img{
+  margin-right: 1rem;
+}
+
+.cart-vertical-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  height: 4rem;
+  max-width: 175px;
+}
+
+.cart-vertical-wrapper p{
+  font-weight: 400;
+}
+
+.shoppingcart-item i:first-child {
+  color: var(--tertiaryColor);
+}
+
+.shoppingcart-item i:last-child {
+  color: var(--highlight);
+}
+
+.shoppingcart-item:nth-child(even){
+  background-color: var(--tableHeadBackgroundClor);
+}
+
+.img-wrapper{
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.shoppingcart-img{
+  max-height: 5rem;
+  max-width: 2.6rem;
+}
+
+.shoppingcart-name{
+  padding-left: -10px;
+  font-weight: 500;
+  max-height: 1.5rem;
+  overflow: hidden;
+}
+
+.shoppingcart-amount{
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  }
+
+.shoppingcart-amount i{
+  font-size: 25px;
+}
+
+.winkelwagen #recipeWrapper{
+  margin-top: 1rem;
+}
+
+.boodschappenlijst #recipeWrapper .shoppingcart-amount i{
+  color: var(--inputBG);
+}
+
+.booschappenlijst .shoppingcart-amount i{
+  color: var(--inputBG);
+}
+
+.bottom-screen-cart{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 12.5rem;
+  background-color: white;
+  width: 84%;
+  padding: 0 8%;
+  box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, .2);
+}
+
+.cart-card-top{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card-top-left{
+  display: flex;
+}
+
+.card-top-left h3 {
+  margin-right: .25rem;  
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.card-top-left h3:last-child{
+  color: var(--highlight);
+}
+
+.card-top-right{
+  display: flex;
+}
+
+.card-top-right h3 {
+  margin-left: .25rem;  
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.card-top-right h3:last-child{
+  color: var(--highlight);
+}
+
+.cart-card-bottom{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-flow: column;
+}
+
+.cart-card-bottom button{
+  padding: .5rem 1.5rem;
+  border: none;
+  background-color: var(--highlight);
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.cart-card-bottom a {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-card-bottom button i {
+  color: white;
+  font-size: 1.1rem;
+  margin-right: .3rem;
+}
+
+#scannerWrapper{
+  position: relative;
+}
+
+#backupScan{
+ position: absolute;
+ left: 0vw;
+}
+.button{
+  background-color: var(--highlight);
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.button i{
+  font-size: 15px;
+}
+
+
+.gone{
+  display: none !important;
+}
+
+#salepageWrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 25px;
+}
+
+.SalePageItem{
+  margin: 0 auto;
+}
+
+.payment .cart-card-bottom {
+  width: 70%;
+  margin: auto;
+  margin-top: 1.75rem;
+  align-items: center;
+}
+
+.payment .cart-card-bottom button{
+  width: max-content;
+}
+
+.payment .cart-card-bottom select{
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+
+}
+
+.payment .cart-card-bottom select option{
+  font-weight: 500;
+  background-color: var(--inputBG);
+}
+
+.payment .cart-card-bottom select option:checked{
+  background-color: var(--highlight);
+  color: white;
+}
+
+.paid p{
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.paid .barcode{
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paid .barcode h1{
+  text-align: left;
+  width: 100%;
+}
+
+.paid .barcode img{
+  height: auto;
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+.paid .barcode img:last-of-type{
+  margin-top: 4rem;
+}
+
+.allergieToggle{
+  display: grid !important;
+}
+
+#routeImg{
+  width: 100%;
+  margin-bottom: 15px;
+}
+#allergieenWrap{
+  display: none;
+  grid-template-columns: 7.5% 92.5%;
+}
+
+.boodschappenlijst{
+  margin-bottom: 8rem;
+  margin-top: 4rem;
+}
+
+.boodschappenlijst .shoppingcart-img{
+  filter: grayscale(100%);
+}
+
+.boodschappenlijst .shoppingcart-item i:first-child {
+  color: lightgray;
+}
+
+.boodschappenlijst .shoppingcart-item i:last-child {
+  color: gray;
+}
+
+.boodschappenlijst .shoppingcart-item:nth-child(even) {
+  background-color: var(--inputBG);
+}
+
+.shoppingList .shoppingcart-name{
+  margin: .3rem 3.5rem;
+  position: absolute;
+}
+
+.total-price{
+  position: absolute;
+  margin-left: 11.25rem;
+}
+
+.shoppingcart-total-price{
+  max-width: 30px;
+  height: 1rem;
+}
+
+.cart-vertical-wrapper{
+  position: absolute;
+  margin-left: 3rem;
+  height: 4rem;
+  padding: 1rem 0rem;
+}

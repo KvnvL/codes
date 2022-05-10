@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin van Loon | Fotografie</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../img/icons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.json">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="../img/logo-h_2.png" alt="" id="logoMain">
+        </div>
+        <div class="header-right">
+            <div class="burger">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox" id="burgerWrapper">
+                    <div class="hamburger" id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </label>
+            </div>
+            <div class="container">
+                <ul>
+                    <li><a class="one" href="../index.php">Home</a></li>
+                    <li><a class="two" href="../index.php">Portfolio</a></li>
+                    <li><a class="three" href="../index.php">Over Mij</a></li>
+                    <li><a class="four" href="../index.php">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="menu" class="menu">
+        <div class="container">
+            <ul>
+                <li><a class="one" href="../index.php">Home</a></li>
+                <li><a class="two" href="../index.php">Portfolio</a></li>
+                <li><a class="three" href="../index.php">Over Mij</a></li>
+                <li><a class="four" href="../index.php">Contact</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <a href="https://twitter.com/kevinvloonnl" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/kevinvloon.nl" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kevinvloon.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="bedankt">
+        <h1>Bedankt voor uw bericht!</h1>
+        <h3>Ik ga z.s.m. naar uw bericht kijken</h3>
+        <p>Deze pagina sluit zichzelf in <span id="timer">7</span>seconden.</p>
+    </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c7f4f10174.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script>
+    function countdown() {
+        var i = document.getElementById('timer');
+        i.innerHTML = parseInt(i.innerHTML)-1;
+    if (parseInt(i.innerHTML)<=0) {
+        setTimeout(function(){
+        window.location.href = '../';
+     });
+    }
+    
+    }
+    
+    setInterval(function(){ countdown(); },1000);</script>
+</body>
+
+</html>

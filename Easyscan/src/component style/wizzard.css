@@ -1,0 +1,76 @@
+#wizzard{
+    margin: 8% !important;
+}
+
+.buttons{
+   display:inline-block;
+   padding:0.7em 1.4em;
+   margin:0 0.3em 0.3em 0;
+   border-radius: 4px;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   text-transform:uppercase;
+   font-weight:400;
+   color:#FFFFFF;
+   box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+   margin-top: 5px;
+   margin-bottom: 5px;
+   text-align:center;
+   position:relative;
+   border: none;
+
+}
+
+.ja{
+    background-color: #D4FFDD;
+    color: #1BCA5C;
+    margin-right: 5px;
+}
+
+.nee{
+    background-color: #F5AEA6;
+    color: #CA1B1B;
+    margin-left: 5px;
+}
+
+p{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.input{
+    margin-bottom: 5px;
+}
+
+label{
+    font-weight: normal;
+    font-style: italic;
+}
+
+#allergieenWrap{
+    padding-top: 5px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}
+
+.lite{
+    background-color: #7b42fa;
+}
+
+.full{
+    background-color: #49089E;
+}
+
+.verder{
+    background-color: #b491f9;
+}
+
+.scanner{
+    background-color: #D4FFDD;
+    color: #1BCA5C;
+}
+
+.active{
+    box-shadow:inset 0 -0.6em 0 -0.35em #7b42fa;
+}

@@ -1,0 +1,34 @@
+#receiptWrapper{
+    margin-top: 25px;
+}
+
+.receiptItem{
+    display: grid;
+    grid-template-columns: 85%  15%;
+    padding: 12.5px 5px;
+    line-height: 25px;
+    position: relative;
+}
+
+.receiptItem:nth-child(odd){
+    background-color: #E9DFFE;
+}
+
+.receiptItem{
+    padding: .5rem
+}
+
+.receiptItem i{
+    position: absolute;
+    bottom: 25px;
+    margin-left: 85%;
+    color: #7b42fa;
+}
+
+.receiptItem:first-child {
+    border-radius: .7rem .7rem 0rem 0rem;
+}
+
+.receiptItem:last-child {
+    border-radius: 0rem 0rem .7rem .7rem;
+}

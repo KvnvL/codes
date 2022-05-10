@@ -1,0 +1,74 @@
+#scanPopup{
+    bottom: -500vh;
+    position: absolute;
+    background-color: #fff;
+    transition: all 1s;
+    width: 100vw ;
+    border-radius: 15px 15px 0 0;
+}
+
+#popupItem{
+ display: grid;
+ grid-template-columns: 25% 75%;
+ grid-template-rows: auto auto;
+ grid-template-areas:
+ "img naam"
+ "aantal aantal";
+ padding: 15px 10px 45px 10px;
+}
+
+#scanPopup img{
+grid-area: img;
+margin-left: 15%;
+height: 100px;
+}
+
+#scanPopup h2{
+font-size: 20px;
+grid-area: naam;
+max-width: 250px;
+max-height: 75px;
+overflow-y: hidden;
+}
+
+#scanPopup h3{
+    text-align: center;
+}
+
+.popup{
+    top: 70vh !important;
+    
+}
+
+#backup{
+    position: absolute !important;
+    width: 100px;
+    margin-top:25px;
+    margin-left: -100vw;
+}
+
+.numberwrapper{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: aantal;
+    gap: 25px;
+}
+
+.numberwrapper h3{
+background-color: #fff;
+padding: 0 25px 5px 25px;
+border-radius: 15px;
+border: 0.5px solid #232323;
+font-size: 25px;
+}
+
+.numberwrapper i:nth-child(1){
+   font-size: 30px;
+   color:  #B491F9;
+}
+
+.numberwrapper i:nth-child(3){
+    font-size: 30px;
+    color: #7b42fa;
+ }

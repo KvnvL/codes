@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo-icon.svg" alt="logo" id="logo">
+        <div class="header-right">
+            <div class="burger">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox" id="burgerWrapper">
+                    <div class="hamburger" id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </label>
+            </div>
+            <div class="container">
+                <ul>
+                    <li><a class="one" href="#one">Home</a></li>
+                    <li><a class="two" href="#two">Over Mij</a></li>
+                    <li><a class="three" href="#three">Portfolio</a></li>
+                    <li><a class="four" href="#four">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="menu" class="menu">
+        <div class="container">
+            <ul>
+                <li><a class="one" href="#one">Home</a></li>
+                <li><a class="two" href="#two">Over Mij</a></li>
+                <li><a class="three" href="#three">Portfolio</a></li>
+                <li><a class="four" href="#four">Contact</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <a href="https://twitter.com/kevinvloonnl" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/kevinvloon.nl" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kevinvloon.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="home-hero">
+        <img src="img/IMG_4195-1.jpg" alt="">
+    </div>
+    <div id="one" class="img-overlay" data-aos="fade-up">
+        <div class="overlay-left">
+        </div>
+        <div class="overlay-right">
+            <h1>Kevin van Loon</h1>
+            <h2 class="ml6" id="portfolio-text">
+                <span class="text-wrapper">
+                    <span class="letters">Portfolio</span>
+                </span>
+            </h2>
+            <div class="indicator"></div>
+            <p>Welkom op mijn portfolio! In dit portfolio zal ik je meenemen langs verschillende projecten waaraan ik
+                heb gewerkt!</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="overmij-home pageItem" id="two" data-aos="fade-up">
+            <div class="titles">
+                <h2 id="mainTitle">Over mij.</h2>
+            </div>
+            <div class="indicator"></div>
+            <div class="overmij-wrapper">
+                <div class="overmij-left">
+                    <h2>Hallo!</h2>
+                    <p>Mijn naam is Kevin, ik ben 18 jaar en kom uit het mooie Drunen gelegen in Noord-Brabant. Ik zit
+                        in het 2e jaar van mijn opleiding tot Media Designer aan de Fontys Hogeschool in Tilburg
+                        gelegen aan de Professor Goossenslaan.</p>
+                    <p>In mijn vrije tijd ben ik graag bezig met het developen van websites en Progressive Web App's.
+                        Daarbij houd ik ook van <a href="https://kevinvloon.nl" target="_blank">fotograferen</a> en
+                        speerwerpen (atletiek). Met dat laatste ben ik afgelopen jaar 10e van Nederland geworden.</p>
+                </div>
+                <div class="overmij-right">
+                    <img src="img/IMG_4195-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="portfolio pageItem" id="three" data-aos="fade-up">
+            <div class="titles">
+                <h2 id="mainTitle">Portfolio.</h2>
+            </div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://kit.fontawesome.com/c7f4f10174.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+:root {
+    --highlight: #7b42fa;
+    --tableHeadBackgroundClor: #E9DFFE;
+    --secondColor: #49089e;
+    --tertiaryColor: #B491F9;
+    --inputBG: #E7E7E7;
+  }
+
+.groceryItem{
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.groceryItem h1{
+    font-size: 20px;
+}
+
+.groceryItem h2{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.groceryItemImg{
+    width: 75px;
+}
+
+#groceryList:nth-child(even){
+    background-color: var(--tableHeadBackgroundClor);
+}
+
+#searchbar{
+border: none;
+  border-radius: 15px;
+  background-color: var(--inputBG);
+  width: 35%;
+  padding: 10px 15%;
+  color: #5D5D5D;
+  position: relative;
+  margin-top: 15px;
+}
+
+#searchIcon{
+    position: absolute;
+}
+
+#submit{
+    margin-left: 15px;
+    padding: 2.5px 10px;
+    background-color: var(--highlight);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(35, 35, 35, 0.25);
+}
+
+.number{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.fa-plus-circle, .fa-minus-circle{
+    font-size: 17.5px;
+}

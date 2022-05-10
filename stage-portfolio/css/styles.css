@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323:wght@400&display=swap');
+
+:root {
+    --primary: #0d0d0d;
+    --secundary: #ffffff;
+    --tertiary: #3993b8;
+    --tertiaryDark: #2b6d8a;
+    --inputBg: #E3E3E3;
+    --sidePadding: 10vw;
+    --projects-items-wh: 18rem;
+    --codeText: 'VT323', monospace;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.indicator{
+    width: 5rem;
+    height: 1px;
+    margin: .5rem 0;
+}
+
+a{
+    color: var(--secundary);
+}
+
+header{
+    height: 4rem;
+    width: 80vw;
+    background-color: rgba(13, 13, 13, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--sidePadding);
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    transition: .3s all ease-in-out;
+    top: -5rem;
+}
+
+header img#logo{
+    height: 2.5rem;
+}
+
+header .header-right{
+    display: flex;
+}
+
+header .header-right ul{
+    display: flex;
+    list-style: none;
+}
+
+header .header-right ul li a{
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    transition: .3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header .header-right ul li a:last-of-type{
+    margin-right: 0;
+}
+
+header .header-right ul li a:hover{
+    color: var(--tertiary);
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.hamburger{
+    transform: rotate(180deg);
+    display: none;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.hamburger div{
+    width: 2.5rem;
+    height: .2rem;
+    background-color: #fff;
+    margin: .45rem 0rem;  
+    transition: all ease-in-out .6s;
+}
+
+.hamburger div:hover{
+    cursor: pointer;
+}
+
+.hamburger div:first-child{
+    margin-top: 0;
+}
+
+.hamburger div:last-child{
+    margin-bottom: 0;
+}
+
+.hamburger.open div:not(:first-child, :last-child){
+    transform: translate(-80px);
+    background: transparent;
+}
+
+.hamburger.open div:first-child{
+    transform: rotate(405deg) translate(.4rem, .5rem);
+}
+
+.hamburger.open div:last-child{
+    transform: rotate(-405deg) translate(.4rem, -.5rem) ;
+}
+
+.menu{
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--primary);
+    padding: 0 var(--sidePadding);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    transition: .5s ease-in-out;
+    transform: translateX(100vw);
+}   
+
+.menu ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu ul li{
+    margin: 1rem 0;
+    transition: .3s ease-in-out;
+}
+
+.menu ul li a:hover{
+    transform: translateX(1rem);
+    color: var(--tertiary);
+}
+
+.menu ul li a{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.active{
+    color: var(--tertiary);
+}
+
+.home{
+    height: 100vh;
+    width: 100vw;
+}
+
+.home #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    top: 0;
+    z-index: 5;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secundary);
+    pointer-events: none;
+}
+
+.overlay .overlay-wrapper{
+    display: flex;
+    flex-flow: column;
+    width: max-content;
+}
+
+.overlay p{
+    font-family: var(--codeText);
+    width: max-content;
+    margin: -.7rem -1rem;
+    opacity: .5;
+}
+
+.overlay .home-title-wrapper h1{
+    font-size: 3.5rem;
+    margin: -.7rem 0;
+}
+
+.overlay .home-title-wrapper h1 span{
+    color: var(--tertiary);
+    pointer-events: all;
+    cursor: default;
+}
+
+.overlay .home-undertitle-wrapper{
+    margin-top: .8rem;
+}
+
+.overlay .home-undertitle-wrapper p{
+    margin: -.2rem -1rem;
+}
+
+.overlay .home-undertitle-wrapper h2{
+    opacity: .8;
+    font-size: 1.2rem;
+}
+
+.socials-wrapper{
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    align-items: center;
+    left: 0;
+    margin-left: 5rem;
+    bottom: 0;
+    margin-bottom: 1rem;
+    z-index: 20;
+}
+
+.socials-wrapper i{
+    margin: .25rem 0;
+    transition: .3s ease-in-out all;
+    pointer-events: all;
+    font-size: 1.1rem;
+}
+
+.socials-wrapper i:hover{
+    color: var(--tertiary);
+}
+
+.socials-wrapper span{
+    width: 2px;
+    height: 7rem;
+    background-color: var(--secundary);
+    margin-top: 1rem;
+}
+
+main{
+    position: absolute;
+    z-index: 10;
+    width: 80vw;
+    padding: 0vw 10vw;
+    background-color: var(--primary);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: var(--secundary);
+}
+
+.pageItem{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.pageItem .title h2{
+    font-size: 2.2rem;
+}
+
+.about-wrapper{
+    margin-bottom: 3rem;
+}
+
+.about-inner-wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.about-inner-wrapper h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-inner-wrapper p{
+    font-size: 1.15rem;
+    text-align: center;
+    width: 52rem;
+}
+
+.about-wrapper .skills-container{
+    max-width: 80rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    border-radius: .5rem;
+    border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.skills-container .column:first-of-type{
+    border-right: 1px solid rgba(255, 255, 255, .05);
+}
+
+.skills-container .column{
+    width: 35rem;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.column .about-icon{
+    height: 4rem;
+}
+
+.column h2{
+    margin-top: 3rem;
+}
+
+.column p{
+    margin-top: 1rem;
+    text-align: center;
+    width: 80%;
+    font-size: 1.1rem;
+}
+
+.column h3{
+    margin-top: 3rem;
+    color: var(--tertiary);
+}
+
+.column ul{
+    margin-top: 1rem;
+    list-style-type: none;
+    text-align: center;
+}
+
+.column ul li{
+    margin: .25rem;
+}
+
+.projects-wrapper{
+margin-bottom: 5rem;
+}
+
+.projects-wrapper .projects-inner-wrapper{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.projects-inner-wrapper .project{
+    width: 24rem;
+    height: 16rem;
+    margin: 0rem .75rem;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.project img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.project .project-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .5s all ease-in-out;
+    border-radius: .94rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    opacity: 0;
+}
+
+.project-overlay.hover:hover{
+    opacity: 1;
+}
+
+.project-overlay h3{
+    font-size: 1.6rem;
+}
+
+.project-overlay p{
+    width: 85%;
+    text-align: center;
+    font-size: .95rem;
+}
+
+.project-overlay button{
+    background-color:transparent;
+    border: 2px solid var(--tertiary);
+    color: var(--secundary);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    margin-top: 1.75rem;
+    transition: .3s ease-in-out;
+}
+
+.project-overlay button:hover{
+    background-color: var(--tertiary);
+    cursor: pointer;
+}
+
+.project-overlay .tech{
+    position: absolute;
+    bottom: 0;
+    opacity: .25;
+    margin-bottom: .5rem;
+    display: flex;
+}
+
+.tech div{
+    border: 2px solid var(--secundary);
+    padding: 0rem .5rem;
+    font-size: .8rem;
+    margin: 0rem .25rem;
+}
+
+@media (max-width: 1500px){
+    .skills-container .column {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 1300px){
+    .skills-container .column{
+        width: 25rem;
+    }
+}
+
+@media (max-width:1080px){
+    .hamburger{
+        display: block;
+    }
+
+    .header-right .container{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    .overlay-wrapper .home-title-wrapper h1{
+        font-size: 2.5rem;
+    }
+
+    .overlay-wrapper .home-title-wrapper h2{
+        font-size: 2.2rem;
+    }
+
+    .socials-wrapper{
+        display: none;
+    }
+
+    .about-inner-wrapper h2{
+        text-align: center;
+    }
+
+    .about-inner-wrapper p{
+        width: 30rem;
+        font-size: .95rem;
+    }
+
+    .skills-container{
+        flex-flow: column;
+    }
+
+    .skills-container .column{
+        width: 30rem;
+    }
+
+    .skills-container .column:first-of-type{
+        border-bottom: 1px solid rgba(255, 255, 255, .05);;
+    }
+
+    .projects-inner-wrapper .project{
+        width: 18rem;
+        height: 12rem;
+    }
+
+    .project-overlay p{
+        width: 90%;
+        margin-bottom: 0rem;
+        font-size: .85rem;
+    }
+
+    .project-overlay button{
+        background-color: transparent;
+        margin-top: 0rem;
+        border: none;
+        color: var(--tertiary);
+        padding: 0rem;
+        font-weight: 600;
+    }
+
+    .project-overlay button:hover{
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 700px){
+    .overlay-wrapper .home-title-wrapper h1{
+        font-size: 2rem;
+    }
+
+    .overlay-wrapper .home-title-wrapper h2{
+        font-size: 1.6rem;
+    }
+
+    .about-inner-wrapper p{
+        width: 25rem;
+        font-size: .9rem;
+    }
+
+    .skills-container .column{
+        width: 25rem;
+    }
+}
+
+@media (max-width: 600px){
+    .about-inner-wrapper p{
+        width: 20rem;
+    }
+
+    .skills-container .column{
+        width: 20rem;
+    }
+}
+
+@media (max-width: 500px){
+    .overlay-wrapper .home-title-wrapper h1{
+        font-size: 1.6rem;
+    }
+
+    .overlay-wrapper .home-title-wrapper h2{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .about-inner-wrapper p{
+        width: 16rem;
+    }
+
+    .skills-container .column{
+        width: 16rem;
+    }
+
+    .overlay-wrapper .home-title-wrapper h1{
+        font-size: 1.4rem;
+    }
+
+    .overlay-wrapper .home-title-wrapper h2{
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,15 @@
+.welkomHeader{
+    margin: 5%;
+}
+
+.welkomBericht{
+   margin: 5%!important; 
+}
+
+.welkomBericht p{
+    font-weight: 400;
+}
+
+.welkomBericht a{
+    color: #7b42fa;
+}
