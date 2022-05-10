@@ -1,6 +1,6 @@
 # Semester 3 | Stage Portfolio
 
-Deze website wordt gepubliceerd op ...
+Deze website wordt gepubliceerd op [kevinvloon.nl/stage](https://kevinvloon.nl/stage)
 
 <img src="img/..." height="300" />
 
