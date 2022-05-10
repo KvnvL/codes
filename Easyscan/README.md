@@ -4,11 +4,7 @@
 
 EasyScan is een scan app voor supermarkten waarmee klanten zelf hun producten kunnen scannen doormiddel van hun eigen device. Ook kunnen klanten gebruik maken van een digitale boodschappenlijst, drukte checker, aanbevolen recepten, in app betalen en nog meer.
 
-<img src="img/login.png" height="300" />
-<img src="img/home.png" height="300" />
-<img src="img/scanner.png" height="300" />
-<img src="img/winkelwagen.png" height="300" />
-<img src="img/profiel.png" height="300" />
+<img src="img/login.png" height="300" /> <img src="img/home.png" height="300" /> <img src="img/scanner.png" height="300" /> <img src="img/winkelwagen.png" height="300" /> <img src="img/profiel.png" height="300" />
 
 ## Project status
 
