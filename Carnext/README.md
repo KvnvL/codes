@@ -2,12 +2,7 @@
 
 Carnext is een app waarmee gebruikers opzoek kunnen gaan naar de voor hun meest geschikte auto en hiervan te koop aangeboden auto's bekijken. De app stelt de gebruiker een aantal makkelijke vragen die betrekking hebben tot wat de ideale auto moet kunnen en hebben.
 
-<img src='./src/Images/screenshots/screen5.png' height='250' />
-<img src='./src/Images/screenshots/screen4.png' height='250' />
-<img src='./src/Images/screenshots/screen3.png' height='250' />
-<img src='./src/Images/screenshots/screen2.png' height='250' />
-<img src='./src/Images/screenshots/screen1.png' height='250' />
-<img src='./src/Images/screenshots/screen6.png' height='250' />
+<img src='./src/Images/screenshots/screen5.png' height='250' /> <img src='./src/Images/screenshots/screen4.png' height='250' /> <img src='./src/Images/screenshots/screen2.png' height='250' /> <img src='./src/Images/screenshots/screen1.png' height='250' /> <img src='./src/Images/screenshots/screen6.png' height='250' />
 
 ## Aan de slag
 
