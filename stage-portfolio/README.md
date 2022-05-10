@@ -2,7 +2,7 @@
 
 Deze website wordt gepubliceerd op [kevinvloon.nl/stage](https://kevinvloon.nl/stage)
 
-<img src="img/..." height="300" />
+<img src="img/website.png" height="300" />
 
 ## Opdracht
 
